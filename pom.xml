@@ -62,6 +62,16 @@
                     <outputDirectory>${project.build.directory}/pmd-reports</outputDirectory>
                 </configuration>
             </plugin>
+             
+
         </plugins>
+         <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.6-SNAPSHOT</version>
+        <configuration>
+          <omitVisitors>FindDeadLocalStores,UnreadFields</omitVisitors>
+        </configuration>
+      </plugin>
     </build>
 </project>
